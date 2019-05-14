@@ -31,7 +31,10 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aKU-KF-8r0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zL-0Dv">
                                 <rect key="frame" x="320" y="212.5" width="35" height="35"/>
@@ -118,6 +121,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uQg-zL-0Dv" firstAttribute="centerY" secondItem="gvd-t0-XBN" secondAttribute="centerY" id="1uy-gE-3e6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uQg-zL-0Dv" secondAttribute="trailing" constant="20" id="21M-jt-3bd"/>
@@ -134,6 +138,9 @@
                             <constraint firstItem="wWP-TT-XxK" firstAttribute="top" secondItem="cBO-sS-F68" secondAttribute="bottom" constant="15" id="yHA-SK-mmm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZOf-lm-Qoz" appends="YES" id="98k-Th-2P0"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="filterView" destination="wWP-TT-XxK" id="Fkh-Bg-3y1"/>
@@ -141,6 +148,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZOf-lm-Qoz">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="7lC-nm-tgA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>

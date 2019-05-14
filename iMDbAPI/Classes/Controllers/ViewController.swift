@@ -33,6 +33,24 @@ class ViewController: UIViewController {
         self.filterView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
     }
     
+    func showFilterView() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.7,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.filterView.transform = .identity
+        },
+                       completion: nil)
+    }
+    
+    func hideFilterView() {
+        UIView.animate(withDuration: 0.5) {
+            self.filterView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
+        }
+    }
+    
     //MARK: - Actions
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
@@ -45,21 +63,31 @@ class ViewController: UIViewController {
         isFilterViewShowing = !isFilterViewShowing
         
         if isFilterViewShowing {
-            UIView.animate(withDuration: 0.5,
-                           delay: 0,
-                           usingSpringWithDamping: 0.7,
-                           initialSpringVelocity: 0,
-                           options: .curveEaseInOut,
-                           animations: {
-                            self.filterView.transform = .identity
-            },
-                           completion: nil)
+            showFilterView()
         } else {
-            UIView.animate(withDuration: 0.5) {
-                self.filterView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
-            }
+            hideFilterView()
         }
     }
     
+    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
+        searchTextField.resignFirstResponder()
+    }
+    
+    
+}
+
+//MARK: - UITextFieldDelegate
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.resignFirstResponder()
+        
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        hideFilterView()
+        isFilterViewShowing = false
+    }
 }
 
