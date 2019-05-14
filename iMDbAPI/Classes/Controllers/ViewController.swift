@@ -51,11 +51,21 @@ class ViewController: UIViewController {
         }
     }
     
+    func showAlert() {
+        let alert = UIAlertController(title: "Error", message: "The name field cannot be blank.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     //MARK: - Actions
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         hideFilterView()
         searchTextField.resignFirstResponder()
+        
+        if searchTextField.text?.count == 0 {
+            showAlert()
+        }
     }
 
     @IBAction func filtersButtonTapped(_ sender: UIButton) {
@@ -73,7 +83,6 @@ class ViewController: UIViewController {
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
         searchTextField.resignFirstResponder()
     }
-    
     
 }
 
