@@ -12,6 +12,7 @@
 		EA7DF43F228ACBDA00D379EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7DF43D228ACBDA00D379EF /* Main.storyboard */; };
 		EA7DF444228ACBDB00D379EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7DF443228ACBDB00D379EF /* Assets.xcassets */; };
 		EA7DF447228ACBDB00D379EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7DF445228ACBDB00D379EF /* LaunchScreen.storyboard */; };
+		EA7DF458228ADF2400D379EF /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF457228ADF2400D379EF /* RoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EA7DF443228ACBDB00D379EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA7DF446228ACBDB00D379EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA7DF448228ACBDB00D379EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA7DF457228ADF2400D379EF /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +56,8 @@
 		EA7DF438228ACBDA00D379EF /* iMDbAPI */ = {
 			isa = PBXGroup;
 			children = (
-				EA7DF456228ACCE200D379EF /* Resources */,
 				EA7DF453228ACC8F00D379EF /* Classes */,
+				EA7DF456228ACCE200D379EF /* Resources */,
 				EA7DF448228ACBDB00D379EF /* Info.plist */,
 			);
 			path = iMDbAPI;
@@ -71,6 +73,7 @@
 		EA7DF44F228ACC3100D379EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA7DF457228ADF2400D379EF /* RoundedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			files = (
 				EA7DF43C228ACBDA00D379EF /* ViewController.swift in Sources */,
 				EA7DF43A228ACBDA00D379EF /* AppDelegate.swift in Sources */,
+				EA7DF458228ADF2400D379EF /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
