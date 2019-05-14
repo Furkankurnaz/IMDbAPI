@@ -54,7 +54,8 @@ class ViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
-        //TODO
+        hideFilterView()
+        searchTextField.resignFirstResponder()
     }
 
     @IBAction func filtersButtonTapped(_ sender: UIButton) {
