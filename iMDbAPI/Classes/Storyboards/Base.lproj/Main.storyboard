@@ -50,13 +50,13 @@
                                 <rect key="frame" x="20" y="372" width="374" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2M-CS-Nce">
-                                        <rect key="frame" x="121" y="16" width="52" height="22"/>
+                                        <rect key="frame" x="20" y="16" width="52" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFg-Fq-j7e">
-                                        <rect key="frame" x="204.66666666666666" y="12" width="45" height="30"/>
+                                        <rect key="frame" x="164.66666666666666" y="12" width="45" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Pick...">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,13 +66,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Year :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16Y-e8-fnN">
-                                        <rect key="frame" x="121" y="58" width="52" height="22"/>
+                                        <rect key="frame" x="20" y="58" width="52" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWd-u3-5yz">
-                                        <rect key="frame" x="204.66666666666666" y="54" width="45" height="30"/>
+                                        <rect key="frame" x="164.66666666666666" y="54" width="45" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Pick...">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,20 +88,44 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7X-d5-efm">
+                                        <rect key="frame" x="320" y="12.666666666666686" width="34" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAl-f7-t04"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANa-4a-vzG">
+                                        <rect key="frame" x="320" y="54.666666666666686" width="34" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RH3-Yc-GbM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94988268613815308" green="0.7739226222038269" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="sFg-Fq-j7e" firstAttribute="centerX" secondItem="wWP-TT-XxK" secondAttribute="centerX" constant="40" id="1xc-FY-Q3z"/>
+                                    <constraint firstItem="sFg-Fq-j7e" firstAttribute="centerX" secondItem="wWP-TT-XxK" secondAttribute="centerX" id="1xc-FY-Q3z"/>
+                                    <constraint firstItem="16Y-e8-fnN" firstAttribute="leading" secondItem="wWP-TT-XxK" secondAttribute="leading" constant="20" id="6xD-Xm-gcD"/>
                                     <constraint firstAttribute="height" constant="128" id="7ln-gB-ecs"/>
+                                    <constraint firstItem="E7X-d5-efm" firstAttribute="centerY" secondItem="w2M-CS-Nce" secondAttribute="centerY" id="8dw-SI-mNa"/>
                                     <constraint firstItem="16Y-e8-fnN" firstAttribute="top" secondItem="w2M-CS-Nce" secondAttribute="bottom" constant="20" id="Agy-6j-lXx"/>
+                                    <constraint firstAttribute="trailing" secondItem="E7X-d5-efm" secondAttribute="trailing" constant="20" id="K4t-HJ-80x"/>
                                     <constraint firstItem="w2M-CS-Nce" firstAttribute="top" secondItem="wWP-TT-XxK" secondAttribute="top" constant="16" id="LOj-7S-yjt"/>
                                     <constraint firstItem="BWd-u3-5yz" firstAttribute="centerY" secondItem="16Y-e8-fnN" secondAttribute="centerY" id="S1n-a4-pJ5"/>
-                                    <constraint firstItem="BWd-u3-5yz" firstAttribute="leading" secondItem="16Y-e8-fnN" secondAttribute="trailing" constant="31.670000000000002" id="Sgt-5k-KUd"/>
+                                    <constraint firstItem="w2M-CS-Nce" firstAttribute="leading" secondItem="wWP-TT-XxK" secondAttribute="leading" constant="20" id="U5e-6K-grM"/>
+                                    <constraint firstItem="ANa-4a-vzG" firstAttribute="centerY" secondItem="16Y-e8-fnN" secondAttribute="centerY" id="URm-qW-5yw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ANa-4a-vzG" secondAttribute="trailing" constant="20" id="XHy-li-QXe"/>
                                     <constraint firstItem="sFg-Fq-j7e" firstAttribute="centerY" secondItem="w2M-CS-Nce" secondAttribute="centerY" id="aJR-4A-gAD"/>
+                                    <constraint firstItem="BWd-u3-5yz" firstAttribute="centerX" secondItem="wWP-TT-XxK" secondAttribute="centerX" id="dzV-eu-e7I"/>
                                     <constraint firstItem="tPE-eM-hbh" firstAttribute="centerX" secondItem="wWP-TT-XxK" secondAttribute="centerX" id="ehy-pE-QLN"/>
                                     <constraint firstAttribute="bottom" secondItem="tPE-eM-hbh" secondAttribute="bottom" constant="4" id="p7b-IN-DYI"/>
-                                    <constraint firstItem="w2M-CS-Nce" firstAttribute="centerX" secondItem="wWP-TT-XxK" secondAttribute="centerX" constant="-40" id="sPM-Gz-aGc"/>
-                                    <constraint firstItem="16Y-e8-fnN" firstAttribute="centerX" secondItem="wWP-TT-XxK" secondAttribute="centerX" constant="-40" id="yPt-lm-LQJ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zL-0Dv">

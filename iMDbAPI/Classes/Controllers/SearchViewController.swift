@@ -126,6 +126,16 @@ class SearchViewController: UIViewController {
         }
     }
     
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            typePickButton.setTitle("Pick...", for: .normal)
+        case 1:
+            yearPickButton.setTitle("Pick...", for: .normal)
+        default: break
+        }
+    }
+    
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3) {
             self.hidePickerView()
