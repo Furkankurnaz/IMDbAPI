@@ -46,8 +46,19 @@
                                     <action selector="filtersButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVy-ma-3ye"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zL-0Dv">
+                                <rect key="frame" x="189.66666666666666" y="307" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="ipS-kM-guh"/>
+                                    <constraint firstAttribute="height" constant="35" id="kUu-GT-nUx"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="search"/>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDb-Pz-erv"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWP-TT-XxK" customClass="RoundedView" customModule="iMDbAPI" customModuleProvider="target">
-                                <rect key="frame" x="20" y="372" width="374" height="128"/>
+                                <rect key="frame" x="20" y="302" width="374" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2M-CS-Nce">
                                         <rect key="frame" x="20" y="16" width="52" height="22"/>
@@ -131,17 +142,6 @@
                                     <constraint firstAttribute="bottom" secondItem="tPE-eM-hbh" secondAttribute="bottom" constant="4" id="p7b-IN-DYI"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zL-0Dv">
-                                <rect key="frame" x="189.66666666666666" y="307" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="ipS-kM-guh"/>
-                                    <constraint firstAttribute="height" constant="35" id="kUu-GT-nUx"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="search"/>
-                                <connections>
-                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDb-Pz-erv"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGd-oH-Mm0">
                                 <rect key="frame" x="0.0" y="586" width="414" height="150"/>
                                 <subviews>
@@ -180,7 +180,7 @@
                             <constraint firstItem="89V-WZ-SiD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="28R-bm-XIu"/>
                             <constraint firstItem="gvd-t0-XBN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4gg-Ez-mps"/>
                             <constraint firstItem="uQg-zL-0Dv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7JA-Yu-Qp1"/>
-                            <constraint firstItem="wWP-TT-XxK" firstAttribute="top" secondItem="uQg-zL-0Dv" secondAttribute="bottom" constant="30" id="BBd-8A-fPq"/>
+                            <constraint firstItem="wWP-TT-XxK" firstAttribute="top" secondItem="uQg-zL-0Dv" secondAttribute="bottom" constant="-40" id="BBd-8A-fPq"/>
                             <constraint firstItem="iGd-oH-Mm0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GlC-0G-bJv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wWP-TT-XxK" secondAttribute="trailing" constant="20" id="KTe-ek-gux"/>
                             <constraint firstItem="wWP-TT-XxK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MrK-wy-pbj"/>

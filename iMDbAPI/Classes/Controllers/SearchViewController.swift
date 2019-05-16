@@ -74,8 +74,8 @@ final class SearchViewController: UIViewController {
         }
     }
     
-    private func showAlert() {
-        let alert = UIAlertController(title: "Error", message: "The name field cannot be blank.", preferredStyle: .alert)
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -97,7 +97,7 @@ final class SearchViewController: UIViewController {
         searchTextField.resignFirstResponder()
         
         if searchTextField.text?.count == 0 {
-            showAlert()
+            showAlert(title: "Error", message: "The name field cannot be blank.")
         } else {
             searchViewModel.getMedia(title: searchTextField.text!, type: selectedType, year: selectedYear)
         }
@@ -235,6 +235,8 @@ extension SearchViewController: SearchViewProtocol {
             let searchVC = mainStoryboard.instantiateViewController(withIdentifier: CONTROLLERS.RESULT.rawValue) as! ResultViewController
             searchVC.results = searchViewModel.searchResults
             self.navigationController?.pushViewController(searchVC, animated: true)
+        } else {
+            showAlert(title: "Error", message: "There are no results.")
         }
     }
 }
