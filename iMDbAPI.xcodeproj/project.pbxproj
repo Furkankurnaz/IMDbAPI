@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4E320B3A5AE695AB1A5DE38 /* Pods_iMDbAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC524D95D51EB32DEF79708 /* Pods_iMDbAPI.framework */; };
 		EA7DF43A228ACBDA00D379EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF439228ACBDA00D379EF /* AppDelegate.swift */; };
 		EA7DF43C228ACBDA00D379EF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF43B228ACBDA00D379EF /* SearchViewController.swift */; };
 		EA7DF43F228ACBDA00D379EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA7DF43D228ACBDA00D379EF /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		EA7DF45A228BFC4F00D379EF /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF459228BFC4F00D379EF /* SearchViewModel.swift */; };
 		EAB77FA3228C2B5800BA780F /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB77FA2228C2B5800BA780F /* SearchModel.swift */; };
 		EAB77FA5228C2B8A00BA780F /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB77FA4228C2B8A00BA780F /* Media.swift */; };
+		EAB77FA7228C3E7A00BA780F /* IMDbAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB77FA6228C3E7A00BA780F /* IMDbAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		EA7DF459228BFC4F00D379EF /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		EAB77FA2228C2B5800BA780F /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		EAB77FA4228C2B8A00BA780F /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		EAB77FA6228C3E7A00BA780F /* IMDbAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDbAPIService.swift; sourceTree = "<group>"; };
+		FA4213CC7FC93B84BD639522 /* Pods-iMDbAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMDbAPI.release.xcconfig"; path = "Target Support Files/Pods-iMDbAPI/Pods-iMDbAPI.release.xcconfig"; sourceTree = "<group>"; };
+		FAC524D95D51EB32DEF79708 /* Pods_iMDbAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMDbAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2B18208F9AA1017BDB3FCE /* Pods-iMDbAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMDbAPI.debug.xcconfig"; path = "Target Support Files/Pods-iMDbAPI/Pods-iMDbAPI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E320B3A5AE695AB1A5DE38 /* Pods_iMDbAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01EF8C3817FC24AF6BA8EB1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE2B18208F9AA1017BDB3FCE /* Pods-iMDbAPI.debug.xcconfig */,
+				FA4213CC7FC93B84BD639522 /* Pods-iMDbAPI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A231C80221B3C652C4A0692A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAC524D95D51EB32DEF79708 /* Pods_iMDbAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA7DF42D228ACBDA00D379EF = {
 			isa = PBXGroup;
 			children = (
 				EA7DF438228ACBDA00D379EF /* iMDbAPI */,
 				EA7DF437228ACBDA00D379EF /* Products */,
+				01EF8C3817FC24AF6BA8EB1D /* Pods */,
+				A231C80221B3C652C4A0692A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +132,7 @@
 		EA7DF452228ACC4C00D379EF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EAB77FA6228C3E7A00BA780F /* IMDbAPIService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -155,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA7DF44B228ACBDB00D379EF /* Build configuration list for PBXNativeTarget "iMDbAPI" */;
 			buildPhases = (
+				88E4D9830D86DA613BBDD116 /* [CP] Check Pods Manifest.lock */,
 				EA7DF432228ACBDA00D379EF /* Sources */,
 				EA7DF433228ACBDA00D379EF /* Frameworks */,
 				EA7DF434228ACBDA00D379EF /* Resources */,
+				CBC2804ACC6F7058079C644C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +244,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		88E4D9830D86DA613BBDD116 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iMDbAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC2804ACC6F7058079C644C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMDbAPI/Pods-iMDbAPI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iMDbAPI/Pods-iMDbAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA7DF432228ACBDA00D379EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -221,6 +302,7 @@
 			files = (
 				EA7DF43C228ACBDA00D379EF /* SearchViewController.swift in Sources */,
 				EA7DF43A228ACBDA00D379EF /* AppDelegate.swift in Sources */,
+				EAB77FA7228C3E7A00BA780F /* IMDbAPIService.swift in Sources */,
 				EAB77FA5228C2B8A00BA780F /* Media.swift in Sources */,
 				EA7DF45A228BFC4F00D379EF /* SearchViewModel.swift in Sources */,
 				EAB77FA3228C2B5800BA780F /* SearchModel.swift in Sources */,
@@ -368,6 +450,7 @@
 		};
 		EA7DF44C228ACBDB00D379EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE2B18208F9AA1017BDB3FCE /* Pods-iMDbAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -386,6 +469,7 @@
 		};
 		EA7DF44D228ACBDB00D379EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA4213CC7FC93B84BD639522 /* Pods-iMDbAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
