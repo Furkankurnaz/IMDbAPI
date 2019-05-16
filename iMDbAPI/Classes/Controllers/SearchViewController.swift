@@ -44,7 +44,7 @@ final class SearchViewController: UIViewController {
     // MARK: - Helpers
     
     private func configureView() {
-        self.pickerContentView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
+        self.filterView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
         hideFilterView()
         hidePickerView()
         getPickerViewDatas()

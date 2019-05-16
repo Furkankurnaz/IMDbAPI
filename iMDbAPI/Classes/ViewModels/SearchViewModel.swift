@@ -49,6 +49,12 @@ class SearchViewModel {
                     
                     self.searchResults = results
                     
+                    //
+                    for res in self.searchResults.search {
+                        print(res)
+                    }
+                    //
+                    
                 } catch let error {
                     print(error)
                 }
