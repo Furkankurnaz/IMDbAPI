@@ -14,9 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let searchVC: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "searchVC")
+        
+        let baseNavController = BaseNavigationController(rootViewController: searchVC)
+        window?.rootViewController = baseNavController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
