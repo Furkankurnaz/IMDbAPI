@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
     
     // MARK: - Outlets
 
@@ -23,12 +23,15 @@ class SearchViewController: UIViewController {
     
     // MARK: - Properties
     
-    var searchViewModel = SearchViewModel()
-    var types: [String] = []
-    var years: [String] = []
+    private var searchViewModel = SearchViewModel()
+    private var types: [String] = []
+    private var years: [String] = []
     
-    var isFilterViewShowing: Bool = false
-    var currentPickerViewType: PickerViewType = .type
+    private var isFilterViewShowing: Bool = false
+    private var currentPickerViewType: PickerViewType = .type
+    
+    private var selectedType: String = ""
+    private var selectedYear: String = ""
     
     // MARK: - Lifecycle
     
@@ -40,18 +43,19 @@ class SearchViewController: UIViewController {
     
     // MARK: - Helpers
     
-    func configureView() {
+    private func configureView() {
+        self.pickerContentView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
         hideFilterView()
         hidePickerView()
         getPickerViewDatas()
     }
     
-    func getPickerViewDatas() {
+    private func getPickerViewDatas() {
         types = searchViewModel.getTypes()
         years = searchViewModel.getYears()
     }
     
-    func showFilterView() {
+    private func showFilterView() {
         UIView.animate(withDuration: 0.5,
                        delay: 0,
                        usingSpringWithDamping: 0.7,
@@ -63,24 +67,24 @@ class SearchViewController: UIViewController {
                        completion: nil)
     }
     
-    func hideFilterView() {
+    private func hideFilterView() {
         UIView.animate(withDuration: 0.5) {
             self.filterView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
         }
     }
     
-    func showAlert() {
+    private func showAlert() {
         let alert = UIAlertController(title: "Error", message: "The name field cannot be blank.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func showPickerView() {
+    private func showPickerView() {
         self.pickerContentView.transform = .identity
         pickerView.reloadAllComponents()
     }
     
-    func hidePickerView() {
+    private func hidePickerView() {
         self.pickerContentView.transform = CGAffineTransform(translationX: 0, y: self.view.bounds.height)
     }
     
@@ -93,6 +97,8 @@ class SearchViewController: UIViewController {
         
         if searchTextField.text?.count == 0 {
             showAlert()
+        } else {
+            searchViewModel.getMedia(title: searchTextField.text!, type: selectedType, year: selectedYear)
         }
     }
 
@@ -135,6 +141,28 @@ class SearchViewController: UIViewController {
         default: break
         }
     }
+    
+    @IBAction func applyButtonTapped(_ sender: UIButton) {
+        hideFilterView()
+        isFilterViewShowing = false
+        
+        if let typeText = typePickButton.titleLabel?.text {
+            if typeText != "Pick..." {
+                selectedType = typeText
+            } else {
+                selectedType = ""
+            }
+        }
+        
+        if let yearText = yearPickButton.titleLabel?.text {
+            if yearText != "Pick..." {
+                selectedYear = yearText
+            } else {
+                selectedYear = ""
+            }
+        }
+    }
+    
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3) {
