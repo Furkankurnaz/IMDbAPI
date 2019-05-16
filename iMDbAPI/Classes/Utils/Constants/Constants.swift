@@ -16,3 +16,7 @@ enum CONTROLLERS: String {
     case SEARCH = "searchVC"
     case RESULT = "resultVC"
 }
+
+enum TABLEVIEWCELLS: String {
+    case RESULT = "resultCell"
+}

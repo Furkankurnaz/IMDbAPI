@@ -55,13 +55,6 @@ class SearchViewModel {
                     self.searchResults = results
                     
                     self.delegate?.updated(success: true)
-                    
-                    //
-                    for res in self.searchResults.search {
-                        print(res)
-                    }
-                    //
-                    
                 } catch let error {
                     print(error)
                     self.delegate?.updated(success: false)

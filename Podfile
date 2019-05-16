@@ -6,6 +6,7 @@ target 'iMDbAPI' do
   use_frameworks!
 
 pod 'Moya'
+pod 'Kingfisher'
 
   # Pods for iMDbAPI
 

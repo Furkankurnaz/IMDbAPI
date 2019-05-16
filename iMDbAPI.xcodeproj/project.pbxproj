@@ -21,6 +21,7 @@
 		EAB77FAA228D53FB00BA780F /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB77FA9228D53FB00BA780F /* BaseNavigationController.swift */; };
 		EAB77FAE228D5FB000BA780F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB77FAD228D5FB000BA780F /* ResultViewController.swift */; };
 		EAB77FB2228D618500BA780F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB77FB1228D618500BA780F /* Constants.swift */; };
+		EAE1EC3F228D888E00EFBC88 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1EC3E228D888E00EFBC88 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		EAB77FA9228D53FB00BA780F /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		EAB77FAD228D5FB000BA780F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		EAB77FB1228D618500BA780F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EAE1EC3E228D888E00EFBC88 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		FA4213CC7FC93B84BD639522 /* Pods-iMDbAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMDbAPI.release.xcconfig"; path = "Target Support Files/Pods-iMDbAPI/Pods-iMDbAPI.release.xcconfig"; sourceTree = "<group>"; };
 		FAC524D95D51EB32DEF79708 /* Pods_iMDbAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMDbAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2B18208F9AA1017BDB3FCE /* Pods-iMDbAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMDbAPI.debug.xcconfig"; path = "Target Support Files/Pods-iMDbAPI/Pods-iMDbAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,8 +106,7 @@
 		EA7DF44E228ACC2900D379EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EAB77FA2228C2B5800BA780F /* SearchModel.swift */,
-				EAB77FA4228C2B8A00BA780F /* Media.swift */,
+				EAB77FB4228D816400BA780F /* Search */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,7 +114,8 @@
 		EA7DF44F228ACC3100D379EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EA7DF457228ADF2400D379EF /* RoundedView.swift */,
+				EAE1EC3D228D875000EFBC88 /* CustomViews */,
+				EAE1EC3C228D874600EFBC88 /* TableViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +208,31 @@
 				EAB77FB1228D618500BA780F /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		EAB77FB4228D816400BA780F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EAB77FA2228C2B5800BA780F /* SearchModel.swift */,
+				EAB77FA4228C2B8A00BA780F /* Media.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EAE1EC3C228D874600EFBC88 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EAE1EC3E228D888E00EFBC88 /* ResultTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EAE1EC3D228D875000EFBC88 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA7DF457228ADF2400D379EF /* RoundedView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +336,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iMDbAPI/Pods-iMDbAPI-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
@@ -317,6 +345,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
@@ -332,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE1EC3F228D888E00EFBC88 /* ResultTableViewCell.swift in Sources */,
 				EAB77FAA228D53FB00BA780F /* BaseNavigationController.swift in Sources */,
 				EA7DF43C228ACBDA00D379EF /* SearchViewController.swift in Sources */,
 				EA7DF43A228ACBDA00D379EF /* AppDelegate.swift in Sources */,
