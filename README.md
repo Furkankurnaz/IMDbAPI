@@ -1,4 +1,4 @@
-# iMDbAPI
+# IMDbAPI
 
 Open Terminal.
 
