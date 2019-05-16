@@ -226,3 +226,11 @@ extension SearchViewController: UIPickerViewDelegate {
         }
     }
 }
+
+extension SearchViewController: SearchViewProtocol {
+    func updated(success: Bool) {
+        if success {
+            //TODO
+        }
+    }
+}

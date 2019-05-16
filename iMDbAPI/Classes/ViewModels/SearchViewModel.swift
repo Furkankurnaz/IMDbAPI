@@ -9,11 +9,17 @@
 import UIKit
 import Moya
 
+protocol SearchViewProtocol: class {
+    func updated(success: Bool)
+}
+
 class SearchViewModel {
     private var types: [String] = []
     private var years: [String] = []
     
     private var searchResults: SearchModel!
+    
+    weak var delegate: SearchViewProtocol?
     
     func getTypes() -> [String] {
         types = [
@@ -46,8 +52,9 @@ class SearchViewModel {
                 
                 do {
                     let results = try JSONDecoder().decode(SearchModel.self, from: data)
-                    
                     self.searchResults = results
+                    
+                    self.delegate?.updated(success: true)
                     
                     //
                     for res in self.searchResults.search {
@@ -57,10 +64,12 @@ class SearchViewModel {
                     
                 } catch let error {
                     print(error)
+                    self.delegate?.updated(success: false)
                 }
                 
             case .failure(let error):
                 print(error)
+                self.delegate?.updated(success: false)
             }
         }
     }
