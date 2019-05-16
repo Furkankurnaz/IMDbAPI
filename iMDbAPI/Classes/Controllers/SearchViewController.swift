@@ -38,6 +38,7 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchViewModel.delegate = self
         configureView()
     }
     
@@ -230,7 +231,10 @@ extension SearchViewController: UIPickerViewDelegate {
 extension SearchViewController: SearchViewProtocol {
     func updated(success: Bool) {
         if success {
-            //TODO
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: STORYBOARDS.MAIN.rawValue, bundle: nil)
+            let searchVC = mainStoryboard.instantiateViewController(withIdentifier: CONTROLLERS.RESULT.rawValue) as! ResultViewController
+            searchVC.results = searchViewModel.searchResults
+            self.navigationController?.pushViewController(searchVC, animated: true)
         }
     }
 }

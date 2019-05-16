@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let searchVC: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "searchVC")
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: STORYBOARDS.MAIN.rawValue, bundle: nil)
+        let searchVC: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: CONTROLLERS.SEARCH.rawValue)
         
         let baseNavController = BaseNavigationController(rootViewController: searchVC)
         window?.rootViewController = baseNavController

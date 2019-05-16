@@ -218,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="26.90217391304348"/>
         </scene>
-        <!--View Controller-->
+        <!--Results-->
         <scene sceneID="LKG-j3-YZx">
             <objects>
-                <viewController id="daI-8t-W0e" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resultVC" title="Results" id="daI-8t-W0e" customClass="ResultViewController" customModule="iMDbAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vhm-PD-lqi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

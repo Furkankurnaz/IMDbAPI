@@ -17,7 +17,7 @@ class SearchViewModel {
     private var types: [String] = []
     private var years: [String] = []
     
-    private var searchResults: SearchModel!
+    var searchResults: SearchModel!
     
     weak var delegate: SearchViewProtocol?
     
